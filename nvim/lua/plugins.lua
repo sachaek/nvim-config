@@ -145,9 +145,10 @@ require("lazy").setup({
     "mfussenegger/nvim-dap",
     config = function()
       local dap = require("dap")
+      local python_cmd = vim.fn.executable("python3") == 1 and "python3" or "python"
       dap.adapters.python = {
         type = "executable",
-        command = "python",
+        command = python_cmd,
         args = { "-m", "debugpy.adapter" },
       }
       dap.configurations.python = {

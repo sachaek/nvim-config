@@ -1,16 +1,25 @@
 # Neovim Python IDE
 
-Готовая конфигурация Neovim для Python-разработки на Windows.
+Готовая конфигурация Neovim для Python-разработки. Работает на **Windows** и **Linux**.
 
 ## Быстрый старт
+
+### Windows
 
 ```powershell
 git clone https://github.com/sachaek/nvim-config
 cd nvim-config
-.\install.bat
+.\install.bat          # запустить от администратора
 ```
 
-Скрипт сам установит Chocolatey → Neovim → Python-пакеты → скопирует конфиг → установит плагины.
+### Linux
+
+```bash
+git clone https://github.com/sachaek/nvim-config
+cd nvim-config
+chmod +x bootstrap.sh
+./bootstrap.sh
+```
 
 ## Что внутри
 
@@ -25,6 +34,17 @@ cd nvim-config
 
 ## Требования
 
-- Windows 10/11
-- Python 3 (установленный)
-- Права администратора (для установки Neovim)
+- **Windows**: Python 3, права администратора
+- **Linux**: Python 3 + pip, sudo (apt/dnf/pacman)
+
+## Хоткеи
+
+| Клавиша | Действие |
+|---------|----------|
+| `Space ff` | Найти файлы |
+| `Space fg` | Поиск по тексту |
+| `gd` | Перейти к определению |
+| `K` | Показать документацию |
+| `Space ca` | Code action |
+| `F5` | Запустить отладку |
+| `Space tl` | Запустить тест |
